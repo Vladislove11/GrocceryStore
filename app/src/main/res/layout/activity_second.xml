@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    android:background="@drawable/cf460b03fe8f440099f4ea7b3f717560"
+    tools:context=".MainActivity">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_columnSpan="4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/layoutProductUp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/editImageIV"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="32dp"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_weight="6"
+            android:orientation="vertical">
+            <EditText
+                android:id="@+id/productNameET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Название"
+                android:textStyle="bold"
+                android:textColor="@color/layoutProductUpText"
+                android:textSize="24sp"/>
+            <EditText
+                android:id="@+id/productPriceET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Цена"
+                android:textColor="@color/layoutProductUpText"
+                android:textSize="24sp"/>
+            <EditText
+                android:id="@+id/productCodeET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Код продукта"
+                android:textColor="@color/layoutProductUpText"
+                android:gravity="right"
+                android:textSize="22sp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/saveBTN"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="22sp"
+        android:text="Сохранить"
+        android:textSize="22sp"
+        android:backgroundTint="@color/colorSecondActivButton"
+        android:textStyle="bold"
+        android:textColor="@color/white"/>
+
+    <ListView
+        android:id="@+id/listViewLV"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:listitem="@layout/list_item"/>
+
+</LinearLayout>
